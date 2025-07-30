@@ -1,0 +1,34 @@
+# Robots.txt for MSG株式会社
+# https://msg-corp.co.jp/robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://msg-corp.co.jp/sitemap.xml
+
+# クロール制限
+Crawl-delay: 1
+
+# 除外するファイル/ディレクトリ
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /*.php$
+
+# 許可するファイル
+Allow: /contact-handler.php
+
+# 検索エンジン別の設定
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# SEO向上のためのコメント
+# このサイトはMSG株式会社の公式サイトです
+# 東洋医学×西洋医学×AIを組み合わせたヘルスケアソリューションを提供しています

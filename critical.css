@@ -1,0 +1,235 @@
+/* Critical CSS - Above the Fold Styles
+   MSG株式会社ランディングページ */
+
+/* CSS変数 */
+:root {
+  --color-primary: #10b981;
+  --color-primary-dark: #059669;
+  --color-text-primary: #1f2937;
+  --color-text-secondary: #4b5563;
+  --color-bg-primary: #ffffff;
+  --color-border-light: rgba(229, 231, 235, 0.5);
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --transition-base: all 0.3s ease;
+}
+
+/* リセット */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  background: linear-gradient(135deg, #f9fafb 0%, #ffffff 50%, rgba(254, 243, 199, 0.3) 100%);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ヘッダー - Critical */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-sm);
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-button {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-base);
+}
+
+.logo-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.logo-text {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--color-text-primary);
+}
+
+/* ナビゲーション - Critical */
+.nav {
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+.nav--desktop {
+  display: none;
+}
+
+.nav__link {
+  background: none;
+  border: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: color 0.2s ease;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 8px;
+}
+
+.nav__link:hover,
+.nav__link--active {
+  color: var(--color-primary);
+  background-color: rgba(16, 185, 129, 0.1);
+}
+
+.mobile-menu-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-primary);
+}
+
+@media (min-width: 768px) {
+  .nav--desktop {
+    display: flex;
+  }
+  
+  .mobile-menu-button {
+    display: none;
+  }
+  
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+}
+
+/* ヒーローセクション - Critical */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 64px;
+}
+
+.hero__content {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--spacing-lg) 0;
+}
+
+.hero__title {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: bold;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.1;
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.hero__description {
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-xl);
+  line-height: 1.5;
+}
+
+/* バッジ - Critical */
+.badge {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  margin-bottom: var(--spacing-md);
+}
+
+.badge--primary {
+  color: var(--color-primary-dark);
+  background-color: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+/* アクセシビリティ - Critical */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+*:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* 動きを減らす設定 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
