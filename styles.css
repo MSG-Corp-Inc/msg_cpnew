@@ -97,6 +97,7 @@ body {
   color: var(--color-primary);
 }
 
+<<<<<<< HEAD
 /* アクセシビリティ - スクリーンリーダー専用 */
 .sr-only {
   position: absolute;
@@ -140,6 +141,8 @@ body {
   }
 }
 
+=======
+>>>>>>> eeda71b7c7f6b9b628ed24473b5583f3adbe0fd1
 /* グリッドレイアウト */
 .grid {
   display: grid;
@@ -1029,6 +1032,7 @@ body {
   gap: var(--spacing-md);
 }
 
+<<<<<<< HEAD
 /* 採用セクションのスタイリング */
 .careers-content {
   text-align: center;
@@ -1041,6 +1045,18 @@ body {
   color: var(--color-text-secondary);
   margin-bottom: var(--spacing-lg);
   line-height: 1.6;
+=======
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+@media (max-width: 640px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+>>>>>>> eeda71b7c7f6b9b628ed24473b5583f3adbe0fd1
 }
 
 .form-group {
@@ -1275,6 +1291,7 @@ body {
 }
 
 /* ===========================
+<<<<<<< HEAD
    追加スタイル
    =========================== */
 .news-card {
@@ -1324,6 +1341,8 @@ body {
 }
 
 /* ===========================
+=======
+>>>>>>> eeda71b7c7f6b9b628ed24473b5583f3adbe0fd1
    レスポンシブ調整
    =========================== */
 @media (max-width: 640px) {

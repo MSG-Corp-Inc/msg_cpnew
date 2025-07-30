@@ -28,7 +28,11 @@ class MSGWebsite {
     this.isMenuOpen = false;
     
     // セクションIDの配列
+<<<<<<< HEAD
     this.sectionIds = ['hero', 'vision', 'what-we-do', 'services', 'media', 'news', 'partners', 'company', 'careers', 'contact'];
+=======
+    this.sectionIds = ['hero', 'vision', 'services', 'media', 'news', 'partners', 'company', 'careers', 'contact'];
+>>>>>>> eeda71b7c7f6b9b628ed24473b5583f3adbe0fd1
     
     // 初期化
     this.init();
